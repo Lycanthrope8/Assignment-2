@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="quote.js"></script>
+    <script type="module" src="convert.js"></script>
+    <script type="module" src="liveUpdate.js"></script>
+    <script src="magicBox.js"></script>
+    <script src="colorChange.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+          
+        <div class="topnav">
+            
+            
+                <a href="#quote">Quote</a>
+                <a href="#hero">Hero Converter</a>
+                <a href="#secLiveUpdate">MMSARO</a>
+                <a href="#magic">Magic Box</a>
+                
+            
+        </div>
+        <h1 style="margin-left: 75px ;color: #a6f8c4; font-size: 2.5em;">Jubayer Hossain</h1>
+      
+    </div>
+
+
+
+    <div id="box">
+        <!-- <h4>Click this buttons to change colors</h4> -->
+        <button type="button" id="redWhite" onclick="colorChange('redWhite')">Red  White</button>
+        <button type="button" id="blueWhite" onclick="colorChange('blueWhite')">Blue  White</button>
+        <button type="button" id="pinkBlue" onclick="colorChange('pinkBlue')">Pink  Blue</button>
+        <button type="button" id="greenGreen" onclick="colorChange('greenGreen')">Green  Green</button>
+    </div>
+    
+    <section id="quote" class="secQuote">
+        <div id="quote_box">
+            <h1>Quote of the day</h1>
+            <blockquote id="quotes">Loading...</blockquote>
+            <span id="author">Loading</span>
+        </div>
+    </section>
+
+
+
+    <section id="hero" class="secHero">
+        <div id="heroConverter">
+            <h1>Hero Converter</h1>
+            <input type="text" id="inp"> 
+            <select id="type">
+                <option value="kglb">Kg to Lb</option>
+                <option value="lbkg">Lb to Kg</option>
+            </select>
+            <button id="btn">GO</button>
+            <p id="ans"></p>
+        </div>
+    </section>
+
+
+
+    <section id="secLiveUpdate">
+        <div>
+            <h1>Live Update MMSARO</h1>
+            <input type="text" id="numberlist">
+            <h4><h3  id="output"></h3></h4>
+        
+            <div id="min" class="liveUpdate"></div>
+            <div id="max" class="liveUpdate"></div>
+            <div id="sum" class="liveUpdate"></div>
+            <div id="avg" class="liveUpdate"></div>
+            <div id="rev" class="liveUpdate"></div>
+        </div>
+    </section>
+
+
+    <section id="magic" class="magicBox">
+        <div>
+            <!-- <script src="magicBox.js"></script> -->
+            <h1 style="color: aliceblue;">Magic Box</h1>
+            <textarea id="textarea" rows="10" cols="34"></textarea>
+            <br><br>
+                <button onclick="clearAll()">Clear All</button>
+                <button onclick="capitalize()">Capitalize</button>
+                <button onclick="sort()">Sort</button>
+                <button onclick="reverse()">Reverse</button>
+                <button onclick="stripBlank()">Strip Blank</button>
+                <button onclick="addNumbers()">Add Numbers</button>
+                <button onclick="shuffle()">Shuffle</button>
+        </div>
+    </section>
+</body>
+</html>
